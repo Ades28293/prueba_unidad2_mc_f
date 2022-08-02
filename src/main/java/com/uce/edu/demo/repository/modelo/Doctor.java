@@ -113,11 +113,6 @@ public class Doctor {
 		this.citasMedicas = citasMedicas;
 	}
 
-	@Override
-	public String toString() {
-		return "Doctor [id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido
-				+ ", fechaNacimiento=" + fechaNacimiento + ", numeroConsultorio=" + numeroConsultorio + ", codSenecyt="
-				+ codSenecyt + ", genero=" + genero + "]";
-	}
+	
 
 }

@@ -107,11 +107,7 @@ public class CitaMedica {
 	public void setPaciente(Paciente paciente) {
 		this.paciente = paciente;
 	}
-	@Override
-	public String toString() {
-		return "CitaMedica [id=" + id + ", numero=" + numero + ", fecha=" + fecha + ", valor=" + valor + ", lugar="
-				+ lugar + ", diagnostico=" + diagnostico + ", receta=" + receta + ", proximaCita=" + proximaCita + "]";
-	}
+	
 	
 
 }

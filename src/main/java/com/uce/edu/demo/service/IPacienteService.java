@@ -16,5 +16,4 @@ public interface IPacienteService {
 
 	public Paciente buscar(Integer id);
 
-	public List<PacienteTO> buscarPaciente(LocalDateTime fecha, String genero);
 }

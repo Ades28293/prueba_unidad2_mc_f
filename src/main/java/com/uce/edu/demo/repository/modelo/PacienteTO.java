@@ -37,8 +37,6 @@ public class PacienteTO {
 		this.nombre = nombre;
 	}
 
-	
-
 	public LocalDateTime getFechaNacimiento() {
 		return fechaNacimiento;
 	}
@@ -53,13 +51,6 @@ public class PacienteTO {
 
 	public void setGenero(String genero) {
 		this.genero = genero;
-	}
-
-	
-	@Override
-	public String toString() {
-		return "PacienteSencillo [cedula=" + cedula + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento
-				+ ", genero=" + genero + "]";
 	}
 
 }

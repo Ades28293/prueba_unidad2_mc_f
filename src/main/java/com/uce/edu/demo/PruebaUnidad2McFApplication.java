@@ -14,6 +14,7 @@ import com.uce.edu.demo.repository.modelo.Doctor;
 import com.uce.edu.demo.repository.modelo.Paciente;
 import com.uce.edu.demo.service.ICitaMedicaService;
 import com.uce.edu.demo.service.IDoctorService;
+import com.uce.edu.demo.service.IGestorCitaMedica;
 import com.uce.edu.demo.service.IPacienteService;
 
 @SpringBootApplication
@@ -28,6 +29,9 @@ public class PruebaUnidad2McFApplication implements CommandLineRunner{
 	@Autowired
 	private ICitaMedicaService citaMedicaService;
 	
+	@Autowired
+	private IGestorCitaMedica citaMedica;
+	
 
 	public static void main(String[] args) {
 		SpringApplication.run(PruebaUnidad2McFApplication.class, args);
@@ -36,57 +40,58 @@ public class PruebaUnidad2McFApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Doctor doc1 = new Doctor();
-		doc1.setCedula("165165");
-		doc1.setNombre("Juan");
-		doc1.setApellido("Hernandes");
-		doc1.setFechaNacimiento(LocalDateTime.of(1999, Month.SEPTEMBER,8,12,45));
-		doc1.setNumeroConsultorio("AB5");
-		doc1.setCodSenecyt("2829");
-		doc1.setGenero("masculino");
+		Doctor doct1 = new Doctor();
+		doct1.setCedula("2335455");
+		doct1.setNombre("Daniel");
+		doct1.setApellido("Quiñones");
+		doct1.setFechaNacimiento(LocalDateTime.of(1997, Month.SEPTEMBER,9,12,45));
+		doct1.setNumeroConsultorio("ACB5");
+		doct1.setCodSenecyt("654654");
+		doct1.setGenero("masculino");
 		
 		
-		Doctor doc2 = new Doctor();
-		doc2.setCedula("21654646");
-		doc2.setNombre("Michael");
-		doc2.setApellido("Cen");
-		doc2.setFechaNacimiento(LocalDateTime.of(1998, Month.SEPTEMBER,8,12,45));
-		doc2.setNumeroConsultorio("AB56");
-		doc2.setCodSenecyt("28293");
-		doc2.setGenero("masculino");
+		Doctor doct2 = new Doctor();
+		doct2.setCedula("2421742");
+		doct2.setNombre("Karol");
+		doct2.setApellido("Aguilar");
+		doct2.setFechaNacimiento(LocalDateTime.of(1998, Month.SEPTEMBER,8,12,45));
+		doct2.setNumeroConsultorio("AF15");
+		doct2.setCodSenecyt("68476");
+		doct2.setGenero("masculino");
+//		
+//	this.doctorService.insertar(doct1);
+//	this.doctorService.insertar(doct2);
 		
-		this.doctorService.insertar(doc1);
-		this.doctorService.insertar(doc2);
-		
-		Paciente pac1 = new Paciente();
-		pac1.setCedula("1711169183");
-		pac1.setNombre("Jose");
-		pac1.setApellido("Aguirre");
-		pac1.setFechaNacimiento(LocalDateTime.of(2003, Month.MARCH,5,12,30));
-		pac1.setCodigo("ja123456");
-		pac1.setEstatura("1.80m");
-		pac1.setPeso("85kg");
-		pac1.setGenero("masculino");
+		Paciente paci1 = new Paciente();
+		paci1.setCedula("53465761");
+		paci1.setNombre("Andres");
+		paci1.setApellido("Saimatama");
+		paci1.setFechaNacimiento(LocalDateTime.of(2003, Month.MARCH,5,12,30));
+		paci1.setCodigo("ja123456");
+		paci1.setEstatura(1.80);
+		paci1.setPeso(80.0);
+		paci1.setGenero("masculino");
 		
 		
-		Paciente pac2 = new Paciente();
-		pac2.setCedula("1711169183");
-		pac2.setNombre("Mario");
-		pac2.setApellido("Benitez");
-		pac2.setFechaNacimiento(LocalDateTime.of(2002, Month.MARCH,4,12,20));
-		pac2.setCodigo("MB123456");
-		pac2.setEstatura("1.90m");
-		pac2.setPeso("98kg");
-		pac2.setGenero("masculino");
+		Paciente paci2 = new Paciente();
+		paci2.setCedula("14526887");
+		paci2.setNombre("Riquelme");
+		paci2.setApellido("Vera");
+		paci2.setFechaNacimiento(LocalDateTime.of(2005, Month.MARCH,4,12,20));
+		paci2.setCodigo("BHGAS546");
+		paci2.setEstatura(1.90);
+		paci2.setPeso(98.0);
+		paci2.setGenero("masculino");
 		
-		this.pacienteService.insertar(pac1);
-		this.pacienteService.insertar(pac2);
+//		this.pacienteService.insertar(paci1);
+//		this.pacienteService.insertar(paci2);
+//		
+//		this.citaMedica.generarCita("1", LocalDateTime.now(), new BigDecimal(15), "Conocoto", "2335455", "14526887");
 		
-		this.citaMedicaService.insertar("1", LocalDateTime.now(), new BigDecimal(15), "Sangolqui", doc1.getCedula(), pac1.getCedula());
 		
-		this.citaMedicaService.actualizarCitaCompleja("1", "Pulmonia", "Paracetamol", LocalDateTime.of(2022,07,4,11,25)); 
+		this.citaMedica.actualizar("1", "Pulmonia", "Paracetamol", LocalDateTime.of(2022,07,4,11,25)); 
 		
-		this.citaMedicaService.buscar(LocalDateTime.of(1884,1,1,12,0), "masculino");
+//		this.citaMedicaService.buscar(LocalDateTime.of(1884,1,1,12,0), "masculino");
 		
 	}
 

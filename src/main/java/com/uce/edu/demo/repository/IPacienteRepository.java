@@ -8,6 +8,7 @@ import com.uce.edu.demo.repository.modelo.Paciente;
 import com.uce.edu.demo.repository.modelo.PacienteTO;
 
 public interface IPacienteRepository {
+	
 	public void insertar(Paciente paciente);
 
 	public void eliminar(Integer id);

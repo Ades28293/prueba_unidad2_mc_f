@@ -40,10 +40,6 @@ public class PacienteServiceImpl implements IPacienteService{
 		return this.pacienteRepository.buscar(id);
 	}
 
-	@Override
-	public List<PacienteTO> buscarPaciente(LocalDateTime fecha, String genero) {
-		// TODO Auto-generated method stub
-		return this.pacienteRepository.buscarPaciente(fecha, genero);
-	}
+	
 	
 }

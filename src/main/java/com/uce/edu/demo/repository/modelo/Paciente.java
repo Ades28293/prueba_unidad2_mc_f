@@ -33,16 +33,17 @@ public class Paciente {
 	@Column(name = "paci_codigo")
 	private String codigo;
 	@Column(name = "paci_estatura")
-	private String estatura;
+	private double estatura;
 	@Column(name = "paci_peso")
-	private String peso;
+	private double peso;
 	@Column(name = "paci_genero")
 	private String genero;
-
+	
 	@OneToMany(mappedBy = "paciente")
 	private List<CitaMedica> citasMedicas;
 
 	// SET y GET
+
 	public Integer getId() {
 		return id;
 	}
@@ -91,19 +92,19 @@ public class Paciente {
 		this.codigo = codigo;
 	}
 
-	public String getEstatura() {
+	public double getEstatura() {
 		return estatura;
 	}
 
-	public void setEstatura(String estatura) {
+	public void setEstatura(double estatura) {
 		this.estatura = estatura;
 	}
 
-	public String getPeso() {
+	public double getPeso() {
 		return peso;
 	}
 
-	public void setPeso(String peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 
@@ -123,11 +124,8 @@ public class Paciente {
 		this.citasMedicas = citasMedicas;
 	}
 
-	@Override
-	public String toString() {
-		return "Paciente [id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido
-				+ ", fechaNacimiento=" + fechaNacimiento + ", codigo=" + codigo + ", estatura=" + estatura + ", peso="
-				+ peso + ", genero=" + genero + "]";
-	}
 
+
+	
+	
 }

@@ -64,13 +64,8 @@ public class PacienteRepositoryImpl implements IPacienteRepository {
 				PacienteTO.class);
 		query.setParameter("datoFecha", fecha);
 		query.setParameter("datoGenero", genero);
-		List<PacienteTO> reporte = query.getResultList();
 
-		for (PacienteTO paciItem : reporte) {
-			LOGGER.info(paciItem);
-		}
-
-		return reporte;
+		return query.getResultList();
 	}
 
 }

@@ -13,6 +13,6 @@ public interface ICitaMedicaRepository {
 	
 	public CitaMedica buscar (String numero);
 	
-	public int actualizarCitaCompleja(String numero, String diagnostico, String receta, LocalDateTime fechaProxima);
+	
 	
 }
