@@ -3,6 +3,7 @@ package com.uce.edu.demo;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.Month;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.uce.edu.demo.repository.modelo.Doctor;
 import com.uce.edu.demo.repository.modelo.Paciente;
+import com.uce.edu.demo.repository.modelo.PacienteTO;
 import com.uce.edu.demo.service.ICitaMedicaService;
 import com.uce.edu.demo.service.IDoctorService;
 import com.uce.edu.demo.service.IGestorCitaMedica;
@@ -89,10 +91,13 @@ public class PruebaUnidad2McFApplication implements CommandLineRunner{
 //		this.citaMedica.generarCita("1", LocalDateTime.now(), new BigDecimal(15), "Conocoto", "2335455", "14526887");
 		
 		
-		this.citaMedica.actualizar("1", "Pulmonia", "Paracetamol", LocalDateTime.of(2022,07,4,11,25)); 
+//		this.citaMedica.actualizar("1", "Pulmonia", "Paracetamol", LocalDateTime.of(2022,07,4,11,25)); 
 		
-//		this.citaMedicaService.buscar(LocalDateTime.of(1884,1,1,12,0), "masculino");
 		
+	List<PacienteTO> pa=this.pacienteService.buscarPaciente(LocalDateTime.of(1884,1,1,12,0), "masculino");
+		for(PacienteTO Item: pa) {
+			LOGGER.info(Item);
+		}
 	}
 
 }

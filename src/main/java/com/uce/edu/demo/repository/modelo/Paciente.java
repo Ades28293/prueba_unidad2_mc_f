@@ -124,6 +124,13 @@ public class Paciente {
 		this.citasMedicas = citasMedicas;
 	}
 
+	@Override
+	public String toString() {
+		return "Paciente [id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido
+				+ ", fechaNacimiento=" + fechaNacimiento + ", codigo=" + codigo + ", estatura=" + estatura + ", peso="
+				+ peso + ", genero=" + genero + "]";
+	}
+
 
 
 	

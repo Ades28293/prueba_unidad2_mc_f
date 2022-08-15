@@ -11,4 +11,6 @@ public interface IDoctorService {
 	public void actualizar (Doctor doctor);
 	
 	public Doctor buscar (Integer id);
+	
+	public Doctor buscarCedula (String cedula);
 }

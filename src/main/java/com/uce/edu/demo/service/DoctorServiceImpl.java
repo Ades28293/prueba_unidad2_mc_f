@@ -35,4 +35,10 @@ public class DoctorServiceImpl implements IDoctorService{
 		// TODO Auto-generated method stub
 		return this.doctorRepository.buscar(id);
 	}
+
+	@Override
+	public Doctor buscarCedula(String cedula) {
+		// TODO Auto-generated method stub
+		return this.doctorRepository.buscarCedula(cedula);
+	}
 }

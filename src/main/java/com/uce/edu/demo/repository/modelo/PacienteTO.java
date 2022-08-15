@@ -53,4 +53,13 @@ public class PacienteTO {
 		this.genero = genero;
 	}
 
+	@Override
+	public String toString() {
+		return "PacienteTO [cedula=" + cedula + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento
+				+ ", genero=" + genero + "]";
+	}
+
+	
+	
+	
 }
